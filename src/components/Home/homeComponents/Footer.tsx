@@ -169,6 +169,18 @@ const SupportWrapper = styled.div`
     }
 `;
 
+const SupportLogoWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 991px) {
+        display: flex;
+        flex-direction: column;
+    }
+`;
+
 interface FooterProps {
     teamLandingData: TeamLandingProps;
 }
@@ -218,16 +230,16 @@ function Footer({ teamLandingData }: FooterProps): ReactElement {
             <BottomFooterSection>
                 <p>{teamLandingData?.footer?.text6?.text}</p>
             </BottomFooterSection>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+            <SupportLogoWrapper>
                 <div style={{ justifyContent: 'flex-start', alignItems: 'center' }}>
                     <img src={hiventures} style={{ height: 283 * 0.4, width: 900 * 0.4 }} />
                 </div>
-                <div style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
                     <a target="_blank" href="http://support.noextraining.com/hu/articles/5558383-szechenyi-2020-tajekoztatasi-kotelezettseg">
                         <img src={szeu} style={{ height: 152, width: 349 * (152 / 241) }} />
                     </a>
                 </div>
-            </div>
+            </SupportLogoWrapper>
         </FooterWrapper>
     );
 }
