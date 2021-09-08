@@ -6,25 +6,25 @@ import 'animate.css/animate.min.css';
 import Header from './homeComponents/Header';
 import Hero from './homeComponents/Hero';
 import { TeamLandingProps } from '../../utils/interfaces';
-import _, { isEmpty } from 'lodash';
+import _ from 'lodash';
 import SideBar from './homeComponents/SideBar';
 
 const VisionSection = lazy(() => import('./homeComponents/VisionSection'));
 const NewThreeKeyFeatures = lazy(() => import('./homeComponents/NewThreeKeyFeatures'));
-const NewVideoMarkupSection = lazy(() => import('./homeComponents/NewVideoMarkupSection'));
-const NewVisionSection = lazy(() => import('./homeComponents/NewVisionSection'));
-const GridLayout = lazy(() => import('./homeComponents/GridLayout'));
-const Noex = lazy(() => import('./homeComponents/Noex'));
-const PlanSection = lazy(() => import('./homeComponents/PlanSection'));
-const NoexSecond = lazy(() => import('./homeComponents/NoexSecond'));
-const ImageRight = lazy(() => import('./homeComponents/ImageRight'));
-const ImageLeft = lazy(() => import('./homeComponents/ImageLeft'));
-const BeforeAfter = lazy(() => import('./homeComponents/BeforeAfter'));
-const BigVideo = lazy(() => import('./homeComponents/BigVideo'));
+// const NewVideoMarkupSection = lazy(() => import('./homeComponents/NewVideoMarkupSection'));
+// const NewVisionSection = lazy(() => import('./homeComponents/NewVisionSection'));
+// const GridLayout = lazy(() => import('./homeComponents/GridLayout'));
+// const Noex = lazy(() => import('./homeComponents/Noex'));
+// const PlanSection = lazy(() => import('./homeComponents/PlanSection'));
+// const NoexSecond = lazy(() => import('./homeComponents/NoexSecond'));
+// const ImageRight = lazy(() => import('./homeComponents/ImageRight'));
+// const ImageLeft = lazy(() => import('./homeComponents/ImageLeft'));
+// const BeforeAfter = lazy(() => import('./homeComponents/BeforeAfter'));
+// const BigVideo = lazy(() => import('./homeComponents/BigVideo'));
+// const BeforeAfterMe = lazy(() => import('./homeComponents/BeforeAfterMe'));
+// const AboutMe = lazy(() => import('./homeComponents/AboutMe'));
+// const ProgramSlider = lazy(() => import('./homeComponents/ProgramSlider'));
 const Footer = lazy(() => import('./homeComponents/Footer'));
-const BeforeAfterMe = lazy(() => import('./homeComponents/BeforeAfterMe'));
-const AboutMe = lazy(() => import('./homeComponents/AboutMe'));
-const ProgramSlider = lazy(() => import('./homeComponents/ProgramSlider'));
 
 const CookieBar = styled.div`
     position: fixed;
@@ -150,7 +150,7 @@ function Home({ data }: HomeProps): ReactElement {
                 <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp" duration={0.8}>
                     <NewThreeKeyFeatures teamLandingData={data} />
                 </ScrollAnimation>
-                <NewVideoMarkupSection teamLandingData={data} />
+                {/* <NewVideoMarkupSection teamLandingData={data} />
                 <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp" duration={0.8}>
                     <NewVisionSection teamLandingData={data} />
                 </ScrollAnimation>
@@ -177,11 +177,11 @@ function Home({ data }: HomeProps): ReactElement {
                 <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp" duration={0.8}>
                     <ImageLeft teamLandingData={data} />
                 </ScrollAnimation>
-                {isEmpty(data?.beforeAfter) ? null : <BeforeAfter teamLandingData={data} />}
+                {_.isEmpty(data?.beforeAfter) ? null : <BeforeAfter teamLandingData={data} />}
                 {
                     // @ts-ignore
                     data?.bigVideo?.videoUrl === '' ? null : <BigVideo teamLandingData={data} />
-                }
+                } */}
                 <Footer teamLandingData={data} />
             </Suspense>
         </div>

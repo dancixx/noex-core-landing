@@ -1,9 +1,15 @@
+// core imports
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+
+// component imports
 import { TeamLandingProps } from '../../../utils/interfaces';
+import szeu from '../../../images/szechenyi-eu.png';
+import hiventures from '../../../images/hiventures-logo.png';
 
 const FooterWrapper = styled.div`
     background-color: black;
+    margin-bottom: -4px;
 `;
 
 const AppLinkWrapper = styled.div`
@@ -212,6 +218,16 @@ function Footer({ teamLandingData }: FooterProps): ReactElement {
             <BottomFooterSection>
                 <p>{teamLandingData?.footer?.text6?.text}</p>
             </BottomFooterSection>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ justifyContent: 'flex-start', alignItems: 'center' }}>
+                    <img src={hiventures} style={{ height: 283 * 0.4, width: 900 * 0.4 }} />
+                </div>
+                <div style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                    <a target="_blank" href="http://support.noextraining.com/hu/articles/5558383-szechenyi-2020-tajekoztatasi-kotelezettseg">
+                        <img src={szeu} style={{ height: 152, width: 349 * (152 / 241) }} />
+                    </a>
+                </div>
+            </div>
         </FooterWrapper>
     );
 }
