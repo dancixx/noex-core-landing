@@ -1,0 +1,139 @@
+{
+  "hosting": [{
+      "site": "aginagytrainer",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [{
+        "source": "/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }]
+      }],
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    },
+    {
+      "site": "benji-ujvary",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [{
+        "source": "/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }]
+      }],
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    },
+    {
+      "site": "extraz",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [{
+        "source": "/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }]
+      }],
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    }, {
+      "site": "ferenc-fitness",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [{
+        "source": "/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }]
+      }],
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    }, {
+      "site": "fitproject",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [{
+        "source": "/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }]
+      }],
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    }, {
+      "site": "noextraining",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [{
+        "source": "/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }]
+      }],
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    }, {
+      "site": "sandrahorvath",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [{
+        "source": "/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }]
+      }],
+      "rewrites": [{
+        "source": "**",
+        "destination": "/index.html"
+      }]
+    }
+  ]
+}
