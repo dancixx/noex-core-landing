@@ -1,11 +1,11 @@
 // core imports
-import { ReactElement } from 'react';
-import styled from 'styled-components';
+import { ReactElement } from "react";
+import styled from "styled-components";
 
 // component imports
-import { TeamLandingProps } from '../../../utils/interfaces';
-import szeu from '../../../images/szechenyi-eu.png';
-import hiventures from '../../../images/hiventures-logo.png';
+import { TeamLandingProps } from "../../../utils/interfaces";
+import szeu from "../../../images/szechenyi-eu.png";
+import hiventures from "../../../images/hiventures-logo.png";
 
 const FooterWrapper = styled.div`
     background-color: black;
@@ -96,7 +96,7 @@ const RealWrapper = styled.div`
     position: relative;
 
     &:before {
-        content: '';
+        content: "";
         height: 56px;
         width: 1px;
         background-color: white;
@@ -108,7 +108,7 @@ const RealWrapper = styled.div`
 
     p {
         color: white;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: 500;
         font-size: 19px;
@@ -129,7 +129,6 @@ const SupportWrapper = styled.div`
         padding-left: 0;
         text-align: center;
         margin-bottom: 30px;
-        width: 100%;
     }
 
     h5 {
@@ -178,6 +177,10 @@ const SupportLogoWrapper = styled.div`
     @media screen and (max-width: 991px) {
         display: flex;
         flex-direction: column;
+
+        a {
+            align-self: flex-end;
+        }
     }
 `;
 
@@ -201,12 +204,22 @@ function Footer({ teamLandingData }: FooterProps): ReactElement {
                     <h5>{teamLandingData?.footer?.text3?.text}</h5>
                     <p
                         onClick={() => {
-                            window.location.href = teamLandingData?.footer?.text4?.redirectUrl;
+                            window.location.href =
+                                "http://support.noextraining.com/en/articles/5133917-terms-conditions";
                         }}
                     >
-                        {teamLandingData?.footer?.text4?.text}
+                        Terms of Service
                     </p>
-                    <a href={`mailto:${teamLandingData?.footer?.text5?.redirectUrl}`}>{teamLandingData?.footer?.text5?.text}</a>
+                    <p
+                        onClick={() => {
+                            window.location.href = "http://support.noextraining.com/en/articles/5133928-privacy-policy";
+                        }}
+                    >
+                        Privacy Policy
+                    </p>
+                    <a href={`mailto:${teamLandingData?.footer?.text5?.redirectUrl}`}>
+                        {teamLandingData?.footer?.text5?.text}
+                    </a>
                 </SupportWrapper>
 
                 <AppLinkWrapper>
@@ -231,14 +244,13 @@ function Footer({ teamLandingData }: FooterProps): ReactElement {
                 <p>{teamLandingData?.footer?.text6?.text}</p>
             </BottomFooterSection>
             <SupportLogoWrapper>
-                <div style={{ justifyContent: 'flex-start', alignItems: 'center' }}>
-                    <img src={hiventures} style={{ height: 283 * 0.4, width: 900 * 0.4 }} />
-                </div>
-                <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
-                    <a target="_blank" href="http://support.noextraining.com/hu/articles/5558383-szechenyi-2020-tajekoztatasi-kotelezettseg">
-                        <img src={szeu} style={{ height: 152, width: 349 * (152 / 241) }} />
-                    </a>
-                </div>
+                <img src={hiventures} style={{ height: 283 * 0.4, width: 900 * 0.4 }} />
+                <a
+                    target="_blank"
+                    href="http://support.noextraining.com/en/articles/6277927-szechenyi-2020-tajekoztatasi-kotelezettseg"
+                >
+                    <img src={szeu} style={{ height: 152, width: 349 * (152 / 241) }} />
+                </a>
             </SupportLogoWrapper>
         </FooterWrapper>
     );
